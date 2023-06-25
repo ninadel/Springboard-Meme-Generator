@@ -71,5 +71,8 @@ div.meme {
   position: absolute;
   z-index: 0;
   top: 0;
-  right: -50px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 12px;
 }
