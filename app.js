@@ -111,10 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // meme list recall function?
 
   // meme add function
-  // TODO add dynamic parameter arguments
-  // TODO handling of meme text
-  // uppercase
-  // text size
   // height of rendered to fill
 
   function addMeme(imgAddress, topText, middleText, bottomText) {
@@ -176,6 +172,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // meme remove function
 
   // form submit listener
+  // TODO
+  // validation of text
   memeForm.addEventListener("submit", function (e) {
     e.preventDefault();
     imgAddress = document.querySelector("#meme-image").value;
