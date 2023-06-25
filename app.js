@@ -140,17 +140,17 @@ document.addEventListener("DOMContentLoaded", function () {
     memeTopText.style.zIndez = 1;
     memeTopText.classList.add("meme-top-text");
     memeTopText.classList.add("meme-text");
-    memeTopText.innerText = "heyoooo";
-
-    memeBottomText.style.zIndez = 1;
-    memeBottomText.classList.add("meme-bottom-text");
-    memeBottomText.classList.add("meme-text");
-    memeBottomText.innerText = "haaaaaya";
+    memeTopText.innerText = topText;
 
     memeMiddleText.style.zIndez = 1;
     memeMiddleText.classList.add("meme-middle-text");
     memeMiddleText.classList.add("meme-text");
-    memeMiddleText.innerText = "heeaya";
+    memeMiddleText.innerText = middleText;
+
+    memeBottomText.style.zIndez = 1;
+    memeBottomText.classList.add("meme-bottom-text");
+    memeBottomText.classList.add("meme-text");
+    memeBottomText.innerText = bottomText;
 
     memeContent.append(memeImg);
     memeContent.append(memeTopText);
@@ -180,14 +180,11 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     imgAddress = document.querySelector("#meme-image").value;
     // at least one text string should be required
-    topTextValue = document.querySelector("#meme-top-text").value;
-    console.log(topTextValue);
-    middleTextValue = document.querySelector("#meme-middle-text").value;
-    console.log(middleTextValue);
-    bottomTextValue = document.querySelector("#meme-bottom-text").value;
-    console.log(bottomTextValue);
+    topText = document.querySelector("#meme-top-text").value;
+    middleText = document.querySelector("#meme-middle-text").value;
+    bottomText = document.querySelector("#meme-bottom-text").value;
     memeForm.reset();
 
-    addMeme(imgAddress, "Hallo", "Hello", "Hullo");
+    addMeme(imgAddress, topText, middleText, bottomText);
   });
 });
