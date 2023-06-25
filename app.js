@@ -188,11 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(bottomTextValue);
     memeForm.reset();
 
-    addMeme(
-      "https://www.hartz.com/wp-content/uploads/2022/01/newborn-puppies-bathroom-1.jpg",
-      "Hallo",
-      "Hello",
-      "Hullo"
-    );
+    addMeme(imgAddress, "Hallo", "Hello", "Hullo");
   });
 });
