@@ -99,9 +99,42 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(memeForm);
   console.log(memeContainer);
 
+  // image resize function
+  function resizeImg(img) {
+    img.addEventListener("load", function (e) {
+      console.log("image loaded");
+      console.log(img.naturalHeight, img.clientHeight);
+      console.log(window.innerHeight, window.innerWidth);
+    });
+  }
+
   // meme list recall function?
 
   // meme add function
+  function addMeme() {
+    let imgAddress =
+      "https://static.wikia.nocookie.net/survivor/images/2/26/S23_Coach_Wade.jpg/revision/latest/scale-to-width-down/666?cb=20120617045445";
+    let memeDiv = document.createElement("div");
+    let memeImg = document.createElement("img");
+    let memeTopTextDiv = document.createElement("div");
+    memeDiv.classList.add("meme");
+    memeImg.classList.add("meme");
+    memeImg.style.zIndex = 0;
+    memeImg.src = imgAddress;
+    // console.log(memeImgHeight);
+    memeTopTextDiv.style.zIndez = 1;
+    memeTopTextDiv.style.backgroundColor = "light-blue";
+    memeTopTextDiv.classList.add("meme-top-text");
+    memeTopTextDiv.classList.add("meme-text");
+    memeTopTextDiv.innerText = "heyoooo";
+    memeDiv.append(memeImg);
+    memeContainer.append(memeDiv);
+    memeContainer.append(memeTopTextDiv);
+    console.log(memeImg);
+    resizeImg(memeImg);
+    console.log("addMeme()");
+    // console.log("imgNaturalHeight", imgNaturalHeight);
+  }
 
   // meme remove function
 
@@ -109,8 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
   memeForm.addEventListener("submit", function (e) {
     e.preventDefault();
     console.log("submit button clicked");
-    imageURL = document.querySelector("#meme-image").value;
-    console.log(imageURL);
+    imageAddress = document.querySelector("#meme-image").value;
+    console.log(imageAddress);
+    // at least one text string should be required
     topTextValue = document.querySelector("#meme-top-text").value;
     console.log(topTextValue);
     middleTextValue = document.querySelector("#meme-middle-text").value;
@@ -118,5 +152,10 @@ document.addEventListener("DOMContentLoaded", function () {
     bottomTextValue = document.querySelector("#meme-bottom-text").value;
     console.log(bottomTextValue);
     memeForm.reset();
+
+    addMeme();
+    window.addEventListener("load", function (e) {
+      console.log("page is fully loaded");
+    });
   });
 });
