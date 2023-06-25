@@ -1,0 +1,18 @@
+/* div {
+} */
+
+/* form {
+} */
+
+.meme-text {
+  font-family: sans-serif;
+  font-size: 3rem;
+  /* font-color: white */
+  /* font border color: black; */
+  /* font border size */
+}
+
+#meme-form input[type="text"] {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
