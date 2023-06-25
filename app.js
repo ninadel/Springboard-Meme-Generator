@@ -111,9 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // meme list recall function?
 
   // meme add function
-  function addMeme() {
-    let imgAddress =
-      "https://static.wikia.nocookie.net/survivor/images/2/26/S23_Coach_Wade.jpg/revision/latest/scale-to-width-down/666?cb=20120617045445";
+  // TODO add dynamic parameter arguments
+  // TODO handling of meme text
+  // uppercase
+  // text size
+  // height of rendered to fill
+
+  function addMeme(imgAddress, topText, middleText, bottomText) {
+    // let imgAddress =
+    //   "https://static.wikia.nocookie.net/survivor/images/2/26/S23_Coach_Wade.jpg/revision/latest/scale-to-width-down/666?cb=20120617045445";
     let memeDiv = document.createElement("div");
     let memeContent = document.createElement("div");
     let memeImg = document.createElement("img");
@@ -124,7 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(removeButton);
     memeContent.classList.add("meme-content");
     memeDiv.classList.add("meme");
-    memeImg.classList.add("meme-content");
+    memeImg.classList.add("meme-img");
+    removeButton.classList.add("remove");
     memeImg.style.zIndex = 0;
     memeImg.src = imgAddress;
     // console.log(memeImgHeight);
@@ -171,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // form submit listener
   memeForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    imageAddress = document.querySelector("#meme-image").value;
+    imgAddress = document.querySelector("#meme-image").value;
     // at least one text string should be required
     topTextValue = document.querySelector("#meme-top-text").value;
     console.log(topTextValue);
@@ -181,6 +188,11 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(bottomTextValue);
     memeForm.reset();
 
-    addMeme();
+    addMeme(
+      "https://www.hartz.com/wp-content/uploads/2022/01/newborn-puppies-bathroom-1.jpg",
+      "Hallo",
+      "Hello",
+      "Hullo"
+    );
   });
 });
