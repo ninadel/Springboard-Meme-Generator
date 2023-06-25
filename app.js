@@ -115,25 +115,55 @@ document.addEventListener("DOMContentLoaded", function () {
     let imgAddress =
       "https://static.wikia.nocookie.net/survivor/images/2/26/S23_Coach_Wade.jpg/revision/latest/scale-to-width-down/666?cb=20120617045445";
     let memeDiv = document.createElement("div");
+    let memeContent = document.createElement("div");
     let memeImg = document.createElement("img");
-    let memeTopTextDiv = document.createElement("div");
+    let memeTopText = document.createElement("div");
+    let memeBottomText = document.createElement("div");
+    let memeMiddleText = document.createElement("div");
+    let removeButton = document.createElement("button");
+    console.log(removeButton);
+    memeContent.classList.add("meme-content");
     memeDiv.classList.add("meme");
-    memeImg.classList.add("meme");
+    memeImg.classList.add("meme-content");
     memeImg.style.zIndex = 0;
     memeImg.src = imgAddress;
     // console.log(memeImgHeight);
-    memeTopTextDiv.style.zIndez = 1;
-    memeTopTextDiv.style.backgroundColor = "light-blue";
-    memeTopTextDiv.classList.add("meme-top-text");
-    memeTopTextDiv.classList.add("meme-text");
-    memeTopTextDiv.innerText = "heyoooo";
-    memeDiv.append(memeImg);
+
+    // testing text divs
+    memeTopText.style.zIndez = 1;
+    memeTopText.classList.add("meme-top-text");
+    memeTopText.classList.add("meme-text");
+    memeTopText.innerText = "heyoooo";
+
+    memeBottomText.style.zIndez = 1;
+    memeBottomText.classList.add("meme-bottom-text");
+    memeBottomText.classList.add("meme-text");
+    memeBottomText.innerText = "haaaaaya";
+
+    memeMiddleText.style.zIndez = 1;
+    memeMiddleText.classList.add("meme-middle-text");
+    memeMiddleText.classList.add("meme-text");
+    memeMiddleText.innerText = "heeaya";
+
+    memeContent.append(memeImg);
+    memeContent.append(memeTopText);
+    memeContent.append(memeBottomText);
+    memeContent.append(memeMiddleText);
+
+    memeDiv.append(memeContent);
+
+    removeButton.innerText = "X";
+
+    removeButton.addEventListener("click", function (e) {
+      e.target.parentNode.remove();
+    });
+
+    memeDiv.append(removeButton);
+
     memeContainer.append(memeDiv);
-    memeContainer.append(memeTopTextDiv);
-    console.log(memeImg);
+
     resizeImg(memeImg);
     console.log("addMeme()");
-    // console.log("imgNaturalHeight", imgNaturalHeight);
   }
 
   // meme remove function
@@ -141,9 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // form submit listener
   memeForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log("submit button clicked");
     imageAddress = document.querySelector("#meme-image").value;
-    console.log(imageAddress);
     // at least one text string should be required
     topTextValue = document.querySelector("#meme-top-text").value;
     console.log(topTextValue);
@@ -154,8 +182,5 @@ document.addEventListener("DOMContentLoaded", function () {
     memeForm.reset();
 
     addMeme();
-    window.addEventListener("load", function (e) {
-      console.log("page is fully loaded");
-    });
   });
 });
