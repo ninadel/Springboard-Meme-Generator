@@ -20,21 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
     memeDiv.classList.add("meme");
     memeImg.classList.add("meme-img");
     removeButton.classList.add("remove");
-    memeImg.style.zIndex = 0;
     memeImg.src = imgAddress;
 
     // divs for meme text
-    memeTopText.style.zIndez = 1;
     memeTopText.classList.add("meme-top-text");
     memeTopText.classList.add("meme-text");
     memeTopText.innerText = topText;
 
-    memeMiddleText.style.zIndez = 1;
     memeMiddleText.classList.add("meme-middle-text");
     memeMiddleText.classList.add("meme-text");
     memeMiddleText.innerText = middleText;
 
-    memeBottomText.style.zIndez = 1;
     memeBottomText.classList.add("meme-bottom-text");
     memeBottomText.classList.add("meme-text");
     memeBottomText.innerText = bottomText;
