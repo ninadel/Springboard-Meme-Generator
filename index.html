@@ -20,10 +20,10 @@
         <h1>Handy Dandy Meme Creator</h1>
         <form action="#" id="new-meme-form">
           <!-- image should be required -->
-          <label for="meme-image">Meme File Address</label><input type="text" id="meme-image" autofocus /></br>
-          <label for="meme-top-text">Text for top of meme</label><input type="text" id="meme-top-text" /></br>
-          <label for="meme-middle-text">Text for middle of meme</label><input type="text" id="meme-middle-text" /></br>
-          <label for="meme-bottom-text">Text for bottom of meme</label><input type="text" id="meme-bottom-text" /></br>
+          <label for="meme-image">Meme Image URL</label><input type="url" id="meme-image" autofocus required="required"/></br>
+          <label for="meme-top-text">Text for top of meme</label><input type="text" id="meme-top-text" required="required"/></br>
+          <label for="meme-middle-text">Text for middle of meme</label><input type="text" id="meme-middle-text" required="required"/></br>
+          <label for="meme-bottom-text">Text for bottom of meme</label><input type="text" id="meme-bottom-text" required="required"/></br>
           <input type="submit" value="Add meme" />
         </form>
       </div>
