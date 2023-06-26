@@ -1,8 +1,17 @@
-/* div {
-} */
+body {
+  max-width: 700px;
+  margin: auto;
+}
 
-/* form {
-} */
+h1 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+label {
+  font-family: sans-serif;
+}
 
 .meme-text {
   position: absolute;
