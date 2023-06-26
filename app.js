@@ -59,8 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // add to memeContainer
     memeContainer.append(memeDiv);
-
-    resizeImg(memeImg);
   }
 
   // listener for when form is submitted
