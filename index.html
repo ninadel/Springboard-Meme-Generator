@@ -19,17 +19,16 @@
         End of FORM -->
         <h1>Handy Dandy Meme Creator</h1>
         <form action="#" id="new-meme-form">
-          <!-- image should be required -->
           <label for="meme-image">Meme Image URL</label><input type="url" id="meme-image" autofocus required="required"/></br>
-          <label for="meme-top-text">Text for top of meme</label><input type="text" id="meme-top-text" required="required"/></br>
-          <label for="meme-middle-text">Text for middle of meme</label><input type="text" id="meme-middle-text" required="required"/></br>
-          <label for="meme-bottom-text">Text for bottom of meme</label><input type="text" id="meme-bottom-text" required="required"/></br>
+          <label for="meme-top-text">Text for top of meme (35 characters max)</label><input type="text" id="meme-top-text" required="required" maxlength="35"/></br>
+          <label for="meme-middle-text">Text for middle of meme (35 characters max)</label><input type="text" id="meme-middle-text" required="required" maxlength="35"/></br>
+          <label for="meme-bottom-text">Text for bottom of meme (35 characters max)</label><input type="text" id="meme-bottom-text" required="required" maxlength="35"/></br>
           <input type="submit" value="Add meme" />
         </form>
       </div>
 
-      <div id="meme-container">
         <!-- DIV which holds all the memes -->
+        <div id="meme-container">
       </div>
     </div>
     <script src="app.js"></script>
