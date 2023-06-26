@@ -7,10 +7,13 @@ h1 {
   font-family: "League Gothic", sans-serif;
   font-size: 5rem;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 label {
   font-family: sans-serif;
+  font-size: 1rem;
 }
 
 .meme-text {
@@ -28,13 +31,15 @@ label {
 
 #meme-form input[type="text"],
 #meme-form input[type="url"] {
-  margin-bottom: 10px;
-  margin-left: 10px;
+  margin-bottom: 1rem;
+  /* margin-left: 10px; */
+  width: 100%;
 }
 
 #meme-container {
   position: relative;
   width: 650px;
+  margin: auto;
   /* display: flex;
   flex-direction: column; */
 }
@@ -69,9 +74,16 @@ div.meme {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
+  margin: auto;
+}
+
+#meme-form {
+  max-width: 400px;
+  margin: auto;
 }
 
 #meme-form input[type="submit"] {
+  float: right;
   font-size: 1rem;
   padding: 0.5rem;
   background-color: royalblue;
