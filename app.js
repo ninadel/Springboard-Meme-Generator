@@ -2,8 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let memeForm = this.querySelector("#new-meme-form");
   let memeContainer = this.querySelector("#meme-container");
-  console.log(memeForm);
-  console.log(memeContainer);
 
   // function that creates and appends a meme based on form inputs
   function addMeme(imgAddress, topText, middleText, bottomText) {
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let memeBottomText = document.createElement("div");
     let memeMiddleText = document.createElement("div");
     let removeButton = document.createElement("button");
-    console.log(removeButton);
     // adding classes for styling
     memeContent.classList.add("meme-content");
     memeDiv.classList.add("meme");
@@ -64,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     memeContainer.append(memeDiv);
 
     resizeImg(memeImg);
-    console.log("addMeme()");
   }
 
   // listener for when form is submitted
